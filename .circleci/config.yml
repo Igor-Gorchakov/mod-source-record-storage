@@ -17,5 +17,6 @@ jobs:
     steps:
       - checkout
       - run: mvn clean install
+      - run: mvn test
       - codecov/upload:
           file: target/code-coverage-report/jacoco.xml
